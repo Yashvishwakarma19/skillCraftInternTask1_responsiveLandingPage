@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="logo">Yash Vishwakarma's site</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Welcome to My Responsive Landing Page</h1>
+      <p>This is my first task for the Skill Craft internship, where I created a clean, aesthetic, and fully responsive landing page with an interactive navigation bar. I am currently pursuing B.Tech in Computer Science and love building practical web projects to enhance my skills.</p>
+  </div>
+  </section>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
